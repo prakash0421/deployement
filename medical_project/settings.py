@@ -151,31 +151,18 @@ AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 # Optional settings
 AWS_S3_FILE_OVERWRITE = False  # To prevent overwriting files with the same nameAWS_DEFAULT_ACL = None  # Recommended to avoid issues with ACLs
-STATIC_URL = 'https://prakash-1234.s3.amazonaws.com/static/'  # Use S3 bucket for static files
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Local directory for collecting static files before uploading
+
 
 # Use S3 for static file storage
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# Static files directories
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',  # Local static files directory
-]
 
-# Media files settings
-MEDIA_URL = 'https://prakash-1234.s3.amazonaws.com/media/'  # Use S3 bucket for media files
-MEDIA_ROOT = BASE_DIR / 'media' 
+
 
 # Static files (CSS, JavaScript, Images)
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# Media files (User uploads)
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
 
 
 
